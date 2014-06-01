@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://w4rr4n7.github.io/sitemap.xml 
