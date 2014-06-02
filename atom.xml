@@ -1,16 +1,171 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
+  <title><![CDATA[Spa City Special]]></title>
   <link href="http://w4rr4n7.github.io/atom.xml" rel="self"/>
   <link href="http://w4rr4n7.github.io/"/>
-  <updated>2014-05-31T23:51:56-05:00</updated>
+  <updated>2014-06-02T00:45:15-05:00</updated>
   <id>http://w4rr4n7.github.io/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
-    
+    <name><![CDATA[w4rr4n7]]></name>
+    <email><![CDATA[w4rr4n7@gmail.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Demo]]></title>
+    <link href="http://w4rr4n7.github.io/blog/2014/06/02/demo/"/>
+    <updated>2014-06-02T00:43:46-05:00</updated>
+    <id>http://w4rr4n7.github.io/blog/2014/06/02/demo</id>
+    <content type="html"><![CDATA[<h1>An h1 header</h1>
+
+<p>Paragraphs are separated by a blank line.</p>
+
+<p>2nd paragraph. <em>Italic</em>, <strong>bold</strong>, <code>monospace</code>. Itemized lists
+look like:</p>
+
+<ul>
+<li>this one</li>
+<li>that one</li>
+<li>the other one</li>
+</ul>
+
+
+<p>Note that &mdash;&ndash; not considering the asterisk &mdash;&ndash; the actual text
+content starts at 4-columns in.</p>
+
+<blockquote><p>Block quotes are
+written like so.</p>
+
+<p>They can span multiple paragraphs,
+if you like.</p></blockquote>
+
+<p>Use 3 dashes for an em-dash. Use 2 dashes for ranges (ex. &ldquo;it&rsquo;s all in
+chapters 12&mdash;14&rdquo;). Three dots &hellip; will be converted to an ellipsis.</p>
+
+<h2>An h2 header</h2>
+
+<p>Here&rsquo;s a numbered list:</p>
+
+<ol>
+<li>first item</li>
+<li>second item</li>
+<li>third item</li>
+</ol>
+
+
+<p>Note again how the actual text starts at 4 columns in (4 characters
+from the left side). Here&rsquo;s a code sample:</p>
+
+<pre><code># Let me re-iterate ...
+for i in 1 .. 10 { do-something(i) }
+</code></pre>
+
+<p>As you probably guessed, indented 4 spaces. By the way, instead of
+indenting the block, you can use delimited blocks, if you like:</p>
+
+<p>~~~
+define foobar() {</p>
+
+<pre><code>print "Welcome to flavor country!";
+</code></pre>
+
+<p>}
+~~~</p>
+
+<p>(which makes copying &amp; pasting easier). You can optionally mark the
+delimited block for Pandoc to syntax highlight it:</p>
+
+<p>~~~python
+import time</p>
+
+<h1>Quick, count to ten!</h1>
+
+<p>for i in range(10):</p>
+
+<pre><code># (but not *too* quick)
+time.sleep(0.5)
+print i
+</code></pre>
+
+<p>~~~</p>
+
+<h3>An h3 header</h3>
+
+<p>Now a nested list:</p>
+
+<ol>
+<li><p>First, get these ingredients:</p>
+
+<ul>
+<li>carrots</li>
+<li>celery</li>
+<li>lentils</li>
+</ul>
+</li>
+<li><p>Boil some water.</p></li>
+<li><p>Dump everything in the pot and follow
+this algorithm:</p>
+
+<pre><code>find wooden spoon
+uncover pot
+stir
+cover pot
+balance wooden spoon precariously on pot handle
+wait 10 minutes
+goto first step (or shut off burner when done)
+</code></pre>
+
+<p>Do not bump wooden spoon or it will fall.</p></li>
+</ol>
+
+
+<p>Notice again how text always lines up on 4-space indents (including
+that last line which continues item 3 above). Here&rsquo;s a link to <a href="http://foo.bar">a
+website</a>. Here&rsquo;s a link to a <a href="local-doc.html">local
+doc</a>. Here&rsquo;s a footnote <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>.</p>
+
+<p>Tables can look like this:</p>
+
+<p>size  material      color</p>
+
+<hr />
+
+<p>9     leather       brown
+10    hemp canvas   natural
+11    glass         transparent</p>
+
+<p>Table: Shoes, their sizes, and what they&rsquo;re made of</p>
+
+<p>(The above is the caption for the table.) Here&rsquo;s a definition list:</p>
+
+<p>apples
+  : Good for making applesauce.
+oranges
+  : Citrus!
+tomatoes
+  : There&rsquo;s no &ldquo;e&rdquo; in tomatoe.</p>
+
+<p>Again, text is indented 4 spaces. (Alternately, put blank lines in
+between each of the above definition list lines to spread things
+out more.)</p>
+
+<p>Inline math equations go in like so: $\omega = d\phi / dt$. Display
+math should get its own line and be put in in double-dollarsigns:</p>
+
+<p>$$I = \int \rho R^{2} dV$$</p>
+
+<p>Done.</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>Footnote text goes here.<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
   
 </feed>
