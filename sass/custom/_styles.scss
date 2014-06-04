@@ -1,1 +1,31 @@
 // Add your custom styling here.
+
+body {
+  background: #333;
+}
+
+.navbar-inverse .navbar-inner {
+  background: #DD4814 ;
+}
+
+h1, h2, .jumbotron {
+    color: #DD4814;
+    font-family: "Source Code Pro";
+  }
+
+p, li, .tagline, h3 {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.date-time {
+  font-family: "Source Code Pro";
+}
+
+code {
+  font-family: "Source Code Pro", sans-serif;
+  font-size: 14px;
+}
+
+.nav li {
+  font-size: 22px;
+}
