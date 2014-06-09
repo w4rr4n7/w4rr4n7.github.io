@@ -83,22 +83,96 @@
     <div class="jumbotron">
       Code
     </div>
-    <p class="meta">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-06-01T23:58:00-05:00" pubdate data-updated="true">Jun 1<span>st</span>, 2014</time></p>
+    
   </header>
   
-  
+  <h1>Crunch Bang 11 Post Post Install Script</h1>
+
+<p>Crunchbang Comes with its own script to update &amp;&amp; upgrade, install Libre, printers, etc. This is what I usually run after that. Right now, don&rsquo;t expect this to work at all. In the future I hope to get everything automated from stock to work ready. Installing dependencies and the various programs I like is easy. Node and Ruby is another story but right now c/p the commands manually is good enough.</p>
+
+<p>I believe this is also what I use on Ubuntu 14.04 but I don&rsquo;t remember if this is what I did on my desktop.</p>
+
+<h3>Dependencies</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># Update
+</span><span class='line'>$ sudo apt-get update && sudo apt-get upgrade
+</span><span class='line'># Basics plus Node dependencies
+</span><span class='line'>$ sudo apt-get install vlc gimp inkscape gparted curl build-essential openssl libssl-dev git python</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Node</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># NVM
+</span><span class='line'>$ git clone git://github.com/creationix/nvm.git ~/.nvm
+</span><span class='line'>$ printf "\n\n# NVM\nif [ -s ~/.nvm/nvm.sh ]; then\n\tNVM_DIR=~/.nvm\n\tsource ~/.nvm/nvm.sh\nfi" &gt;&gt; ~/.bashrc
+</span><span class='line'>$ NVM_DIR=~/.nvm
+</span><span class='line'>$ source ~/.nvm/nvm.sh
+</span><span class='line'># install node
+</span><span class='line'>$ nvm install v0.10.28
+</span><span class='line'>$ nvm alias default 0.10
+</span><span class='line'>$ nvm use 0.10
+</span><span class='line'># update
+</span><span class='line'>$ npm install -g npm</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Stuff that needs Node while we are here</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># bower, grunt, yo, bootstrap
+</span><span class='line'>$ npm install -g yo
+</span><span class='line'>$ mkdir dev
+</span><span class='line'>$ cd dev
+</span><span class='line'>$ bower install bootstrap</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Ruby</h3>
+
+<p>I have the least confidence in this part. I used to use RVM. On a whim I tried out rbenv. Now, I aint some fancy pants rubydev that needs to manage multiple Ruby environments but I&rsquo;ve found that manually initiating ruby locally within the project&rsquo;s directory to be a more elegant method.</p>
+
+<p>I had some issues with getting terminator to play nice with both NPM and Ruby. I think what I have below works, but I&rsquo;m not entirely sure. Your mileage may vary.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># ruby via rbenv
+</span><span class='line'>$ git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
+</span><span class='line'>$ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' &gt;&gt; ~/.bash_profile
+</span><span class='line'># ruby-build so you can rbenv install
+</span><span class='line'>$ git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+</span><span class='line'># install ruby version 2.1.2 (can be other versions)
+</span><span class='line'>$ rbenv install 2.1.2
+</span><span class='line'>$ rbend rehash
+</span><span class='line'># enable command line
+</span><span class='line'>$ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' &gt;&gt; ~/.bashrc
+</span><span class='line'>$ echo 'eval "$(rbenv init -)"' &gt;&gt; ~/.bashrc</span></code></pre></td></tr></table></div></figure>
+
 
 </article>
 
